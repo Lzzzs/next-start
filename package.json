@@ -2,26 +2,36 @@
   "name": "next-test",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.38.6",
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
     "autoprefixer": "^10.4.14",
+    "eslint": "^8.40.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
     "typescript": "5.0.4"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
