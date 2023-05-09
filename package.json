@@ -12,15 +12,20 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git add . && cz"
+
   },
   "dependencies": {
+    "cz-git": "^1.6.1",
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
     "autoprefixer": "^10.4.14",
@@ -33,5 +38,10 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
