@@ -13,8 +13,8 @@
     "lint:fix": "eslint . --fix",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "commit": "git add . && cz"
-
+    "commit": "git add . && cz",
+    "test": "vitest"
   },
   "dependencies": {
     "cz-git": "^1.6.1",
@@ -28,13 +28,16 @@
     "@commitlint/config-conventional": "^17.6.3",
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
+    "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.40.0",
     "husky": "^8.0.3",
+    "jsdom": "^22.0.0",
     "lint-staged": "^13.2.2",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "vitest": "^0.31.0"
   },
   "lint-staged": {
     "*": "eslint --fix"
